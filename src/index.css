@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 19% 7%;
+    --foreground: 40 12% 92%;
+    --card: 222 18% 10%;
+    --card-foreground: 40 12% 92%;
+    --popover: 222 18% 9%;
+    --popover-foreground: 40 12% 92%;
+    --primary: 36 91% 55%;
+    --primary-foreground: 222 30% 8%;
+    --secondary: 222 14% 16%;
+    --secondary-foreground: 40 12% 92%;
+    --muted: 222 14% 16%;
+    --muted-foreground: 220 9% 60%;
+    --accent: 36 91% 55%;
+    --accent-foreground: 222 30% 8%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 14% 20%;
+    --input: 222 14% 18%;
+    --ring: 36 91% 55%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-background text-foreground font-mono antialiased;
+    background-color: #0f1117;
+  }
+}
+
+/* Hide scrollbars in the prompter for a clean look but keep scrollability */
+.prompter-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(245, 166, 35, 0.3) transparent;
+}
+.prompter-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.prompter-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(245, 166, 35, 0.3);
+  border-radius: 9999px;
+}
